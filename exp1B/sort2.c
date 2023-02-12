@@ -15,7 +15,7 @@ int main()
     int a[n];
     for(i=0;i<n;i++)
     {
-        a[i]= rand() % 100 + 1;
+        a[i]= rand() % 1000 + 1;
         printf("%d  ,",a[i]);
     }
     
