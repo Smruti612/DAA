@@ -14,7 +14,7 @@ int main()
     int a[n],num;
     for(k=0;k<n;k++)
     {
-        a[k]= rand() % 100 + 1;
+        a[k]= rand() % 1000 + 1;
         printf("%d  ,",a[k]);
     }
     //int n[]={40,20,60,10,50,30};
