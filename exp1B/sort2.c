@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <conio.h>  
+#include <stdlib.h> 
 
 
 void selection(int a[],int n);
@@ -13,7 +15,8 @@ int main()
     int a[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        a[i]= rand() % 100 + 1;
+        printf("%d  ,",a[i]);
     }
     
     selection(a,n);
@@ -25,6 +28,8 @@ int main()
 void display(int a[],int n)
 {
     int i;
+
+    printf("\nANS:\n");
     for(i=0;i<n;i++)
     {
         printf("%d ,",a[i]);

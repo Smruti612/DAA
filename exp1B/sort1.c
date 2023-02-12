@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <conio.h>  
+#include <stdlib.h> 
 
 void insertionsort(int a[],int n);
 void insert1(int a[],int n);
@@ -9,10 +11,11 @@ int main()
     int n,k=0;
     printf("\nenter the no. of elements :");
     scanf("%d",&n);
-    int a[n];
+    int a[n],num;
     for(k=0;k<n;k++)
     {
-        scanf("%d",&a[k]);
+        a[k]= rand() % 100 + 1;
+        printf("%d  ,",a[k]);
     }
     //int n[]={40,20,60,10,50,30};
     insertionsort(a,n);
