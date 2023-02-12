@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <conio.h>  
 #include <stdlib.h> 
+#include <time.h>
+
+//#define CLOCKS_PER_SEC ((clock_t)(1000))
 
 void insertionsort(int a[],int n);
 void insert1(int a[],int n);
@@ -9,6 +12,7 @@ int main()
 {
    
     int n,k=0;
+    clock_t start,end;
     printf("\nenter the no. of elements :");
     scanf("%d",&n);
     int a[n],num;
@@ -17,18 +21,22 @@ int main()
         a[k]= rand() % 1000 + 1;
         printf("%d  ,",a[k]);
     }
-    //int n[]={40,20,60,10,50,30};
+     double time1; 
+    start=clock();
     insertionsort(a,n);
-    //insert1(a,n);
+    end=clock();
     display(a,n);
-
+    
+    time1= ((double)(end - start))/CLOCKS_PER_SEC;
+    
+    printf("\n time taken for %d elements: %lf\n ",n,time1);
     return 0;
 }
 
 void display(int a[],int n)
 {
      int i;
-     printf("Ans:\n");
+     printf("\nAns:\n");
     for(i=0;i<n;i++)
     {
         printf("%d ,",a[i]);
